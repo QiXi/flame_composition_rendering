@@ -1,6 +1,6 @@
 name: flame_composition_rendering
 description: Plugin for integrating composition rendering into the Flame game engine.
-version: 0.1.0-dev.2
+version: 0.1.0-dev.3
 homepage: 'https://github.com/QiXi/flame_composition_rendering'
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   vector_math: '>=2.1.0 <3.0.0'
-  composition_rendering: ^0.2.0
+  composition_rendering: ^0.2.1
   flame: ^1.0.0-releasecandidate.13
 
 dev_dependencies:
