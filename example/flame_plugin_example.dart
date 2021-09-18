@@ -16,7 +16,7 @@ void main() {
   );
 }
 
-class ExampleLauncher extends BaseGame {
+class ExampleLauncher extends FlameGame {
   final FlamePluginComponent plugin = FlamePluginComponent();
   final GameScene gameScene = GameScene();
 

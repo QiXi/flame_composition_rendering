@@ -17,7 +17,7 @@ void main() {
   );
 }
 
-class ExampleLauncher extends BaseGame {
+class ExampleLauncher extends FlameGame {
   @override
   Future<void> onLoad() async {
     await Flame.images.loadAll(['crab.png']);
