@@ -1,3 +1,7 @@
+## 0.1.0-dev.5 (2021-09-23)
+
+* Update composition_rendering: ^0.3.0
+
 ## 0.1.0-dev.4
 
 * Update flame: ^1.0.0-releasecandidate.14
