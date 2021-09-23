@@ -1,10 +1,11 @@
-import 'dart:ui' show Canvas, Image;
+import 'dart:ui' show Canvas;
 
 import 'package:composition_rendering/core.dart';
 import 'package:composition_rendering/scene.dart';
 import 'package:composition_rendering/systems.dart';
 import 'package:flame/components.dart' show Component;
-import 'package:flame/flame.dart';
+
+import 'plugin_system_registry.dart';
 
 class FlamePluginComponent extends Component with Registry {
   static final PluginSystemRegistry registry = PluginSystemRegistry();
@@ -31,6 +32,7 @@ class FlamePluginComponent extends Component with Registry {
 
   @override
   void update(double dt) {
+    super.update(dt);
     systems.updateSystem.update(dt);
     _scene.updateScene(dt);
   }
@@ -38,31 +40,5 @@ class FlamePluginComponent extends Component with Registry {
   @override
   void render(Canvas canvas) {
     systems.renderSystem.render(canvas);
-  }
-}
-
-class PluginSystemRegistry extends SystemRegistry {
-  PluginSystemRegistry() : super(parameters: Parameters(), assetSystem: PluginAssetSystem());
-}
-
-class PluginAssetSystem extends AssetSystem {
-  @override
-  Image? getImageFromCache(String fileName) {
-    return Flame.images.fromCache(fileName);
-  }
-
-  @override
-  Future<Image?> loadImage(String fileName) {
-    return Flame.images.load(fileName);
-  }
-
-  @override
-  Future<String> readFile(String fileName) {
-    return Flame.assets.readFile(fileName);
-  }
-
-  @override
-  Future<Map<String, dynamic>> readJson(String fileName) {
-    return Flame.assets.readJson(fileName);
   }
 }
