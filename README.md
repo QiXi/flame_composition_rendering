@@ -103,3 +103,10 @@ class SpriteBatchComponent extends FlameBatchComponent {
   }
 }
 ```
+
+
+## Support
+
+You can support the development of libraries for creating multiplatform games in Flutter:
+
+[![Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/flutterio)
